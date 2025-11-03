@@ -1,0 +1,36 @@
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.cache/
+
+# Model downloads / cache (DeepFace, mediapipe, etc.)
+~/.deepface/
+.deepspeed*
+.deepface_cache/
+models/
+
+# Jupyter junk (if you ever use it)
+.ipynb_checkpoints/
+
+# Photos / training data (VERY important for privacy)
+faces/
+faces/*
+
+# IDE / editor files
+.vscode/
+*.code-workspace
+*.idea/
