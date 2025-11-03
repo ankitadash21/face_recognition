@@ -1,96 +1,117 @@
 Real-Time Face Recognition System
-📌 Overview
-
-This project implements a real-time face recognition system using Python, OpenCV, and DeepFace.
-The application captures live video from a webcam, detects faces, and identifies known individuals by comparing them to a stored face dataset.
-
-All processing is performed locally to maintain privacy and ensure responsible handling of biometric data.
-
-🧠 Features
-
-Real-time face detection and recognition
-
-Local processing with pre-trained face embeddings
-
-Customizable face database for recognized users
-
-Virtual environment support for clean, reproducible setup
-
-Ethical and privacy-focused design
-
-🛠️ Technology Stack
-Category	Tools
-Language	Python
-Computer Vision	OpenCV, Mediapipe
-Deep Learning	DeepFace (Facenet backend)
-Environment	Virtualenv (venv)
-📂 Project Structure
-│── faces/                # Place face images here (not included for privacy)
-│── live_recognition.py   # Real-time recognition script
-│── face_detect.py        # Face detection test script
-│── requirements.txt      # Dependencies
-│── README.md             # Documentation
-│── .gitignore
 
 
-Note: The faces/ folder intentionally remains empty. Users should add their own images.
 
-⚙️ Installation & Setup
-1️⃣ Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
 
-2️⃣ Create and activate virtual environment
+
+
+
+
+
+
+A real-time facial recognition application built using Python, OpenCV and DeepFace.
+The system detects and recognizes faces from a live webcam feed using deep learning-based facial embeddings.
+All processing is performed locally.
+
+Overview
+
+This project demonstrates a working prototype for real-time facial recognition on a local machine.
+It is intended for educational and controlled use only, with image data supplied by the user.
+
+Features
+
+Real-time face detection
+
+Real-time face recognition
+
+Custom local face database
+
+Offline processing
+
+Virtual environment support
+
+Requirements
+
+Python 3.10
+
+OpenCV
+
+DeepFace
+
+Mediapipe
+
+TensorFlow (compatible build)
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/your-username/face-recognition.git
+cd face-recognition
+
+
+Create a virtual environment and activate:
+
 python -m venv venv
-venv\Scripts\activate   # Windows
-# or
-source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate      # Windows
+# source venv/bin/activate # Mac / Linux
 
-3️⃣ Install dependencies
+
+Install dependencies:
+
 pip install -r requirements.txt
 
-▶️ Running the Application
-Test webcam + detection:
+Project Structure
+face_recognition/
+│
+├── faces/                 # User-provided training images (not included)
+│   └── README.md          # Instructions for adding images
+│
+├── live_recognition.py    # Main real-time recognition script
+├── face_detect.py         # Face detection test script
+├── requirements.txt
+└── README.md
+
+Usage
+1. Test camera and detection
 python face_detect.py
 
-Run live face recognition:
+2. Run face recognition
 python live_recognition.py
 
 
-Add clear images of faces (one per person) into the faces/ directory.
-Ensure each image contains a single face.
+Place images of known individuals in the faces/ directory
+(one face per image recommended, clear frontal views).
 
-✅ Usage Notes
+Notes
 
-Ensure proper lighting for accurate recognition
+Use multiple clear images per person for higher accuracy.
 
-Add 3–5 images per person for better performance
+Press Q to exit webcam window.
 
-Press Q to exit the webcam window
+System performance depends on camera quality and lighting conditions.
 
-Works offline; all biometric data remains local
+Ethical Use
 
-🔐 Ethical Considerations
+This project is intended for:
 
-This system is designed strictly for personal learning, controlled environments, and consenting individuals.
+Personal learning
 
-Do not use for surveillance
+Research / experimentation
 
-Obtain consent for all enrolled faces
+Use with willing participants only
 
-Do not upload biometric data publicly
+Do not deploy for surveillance or without consent.
+All image data remains local.
 
-🚀 Future Enhancements
+Potential Improvements
 
-Liveness / anti-spoofing detection
+Liveness / spoof detection
 
 GUI interface
 
-Attendance/ logging system
+Face enrollment pipeline
 
-Mobile / Raspberry Pi deployment
+Logging / attendance system
 
-📄 License
-
-This project is intended for educational purposes.
-Use responsibly and lawfully.
+Edge deployment (Raspberry Pi)
