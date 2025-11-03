@@ -57,7 +57,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 face_recognition/
